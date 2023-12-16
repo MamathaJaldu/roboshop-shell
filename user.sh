@@ -60,7 +60,7 @@ else
 
  cd /app
 
- unzip /tmp/user.zip &>> $LOGFILE
+ unzip -o /tmp/user.zip &>> $LOGFILE
 
  VALIDATE $? "unzipping application"
 
