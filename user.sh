@@ -35,9 +35,11 @@ VALIDATE $? "disable nodejs default version"
 
 dnf module enable nodejs:18 -y &>> $LOGFILE
 
-VALIDATE $? "enable nodejs 18 version"
+VALIDATE $? "Enabling NodeJS:18"
 
-VALIDATE $? "install nodejs" &>> $LOGFILE
+dnf install nodejs -y  &>> $LOGFILE
+
+VALIDATE $? "Installing NodeJS:18"
 
 id roboshop  # if username roboshop does not exist then it is failure
 
