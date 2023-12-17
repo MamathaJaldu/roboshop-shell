@@ -17,7 +17,7 @@ VALIDATE(){
        echo -e "$2...$R FAILED $N"
        exit 1
     else
-       echo -e "$2...$R success $N"
+       echo -e "$2...$G success $N"
     fi     
 }
 
@@ -53,7 +53,7 @@ cd /usr/share/nginx/html &>> $LOGFILE
 
 VALIDATE $? "change directory to html"
 
-unzip /tmp/web.zip &>> $LOGFILE
+unzip -o /tmp/web.zip &>> $LOGFILE
 
 VALIDATE $? "unzip web application"
 
