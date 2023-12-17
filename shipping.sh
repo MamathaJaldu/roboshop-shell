@@ -40,7 +40,7 @@ then
    useradd roboshop
    VALIDATE $? "user roboshop added"
 else
-   echo "-e "user already exist $Y skipping $N""
+   echo -e "user already exist $Y skipping $N""
 fi
 
 mkdir -p /app &>> $LOGFILE

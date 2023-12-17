@@ -66,15 +66,15 @@ mkdir -p /app &>> $LOGFILE
 
  VALIDATE $? "copying payment service"
 
- systemctl daemon-reload
+ systemctl daemon-reload &>> $LOGFILE
 
  VALIDATE $? "reload service"
 
- systemctl enable payment 
+ systemctl enable payment &>> $LOGFILE
 
  VALIDATE $? "enable payment service"
 
- systemctl start payment
+ systemctl start payment &>> $LOGFILE
 
  VALIDATE $? "start payment service"
 
